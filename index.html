@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레츠코레일</title>
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  
+  <!-- XEICON -->
+  <link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="js/slick/slick-theme.css" />
+  <link rel="stylesheet" href="js/slick/slick.css" />
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-1f">
+        <a href="#"><img class="logo" src="images/logos/lets_logo.gif" alt="로고"></a>
+        <div class="lnb-area">
+          <ul class="lnb">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="https://info.korail.com/info/index.do" target="_blank">한국철도공사</a></li>
+            <li><a href="#">기업전용</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-2f">
+        <nav>
+          <ul class="gnb">
+            <li class="main">
+              <a href="#none">승차권</a>
+              <div class="sub_all 12">
+                <ul class="sub_of_sub first">
+                  <li class="bold"><a href="#none">승차권예약</a></li>
+                  <li><a href="#none">일반승차권</a></li>
+                  <li><a href="#none">할인승차권</a></li>
+                  <li><a href="#none">4인 동반석</a></li>
+                  <li><a href="#none">관광열차</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">발권/취소/변경</a></li>
+                  <li><a href="#none">발권/취소(반환)</a></li>
+                  <li><a href="#none">예약변경</a></li>
+                  <li><a href="#none">이용내역/영수증출력</a></li>
+                  <li><a href="#none">과거이용내역신청/조회</a></li>
+                  <li><a href="#none">도시락/제휴상품영수증</a></li>
+                  <li><a href="#none">인터넷반환접수</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">정기승차권</a></li>
+                  <li><a href="#none">정기승차권 조회</a></li>
+                  <li><a href="#none">정기승차권 발급</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">미등록고객서비스</a></li>
+                  <li><a href="#none">승차권예약</a></li>
+                  <li><a href="#none">발권/취소(반환)</a></li>
+                  <li><a href="#none">받은승차권 예약취소</a></li>
+                  <li><a href="#none">승차권재발권</a></li>
+                  <li><a href="#none">이용내역/영수증출력</a></li>
+                  <li><a href="#none">네이버/카카오 승차권 영수증출력</a></li>
+                  <li><a href="#none">지연료 계좌반환 신청</a></li>
+                </ul>
+                <ul class="sub_of_sub last">
+                  <li class="bold"><a href="#none">이용안내</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main">
+              <a href="#none">관광열차</a>
+              <div class="sub_all">
+                <ul class="sub_of_sub first">
+                  <li class="bold"><a href="#none">동해산타열차</a></li>
+                  <li><a href="#none">동해산타열차 소개</a></li>
+                  <li><a href="#none">동해산타열차 추천여행</a></li>
+                  <li class="bold"><a href="#none">서해금빛열차</a></li>
+                  <li><a href="#none">West gold-train 소개</a></li>
+                  <li><a href="#none">West gold-train 추천여행</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">백두대간협곡열차</a></li>
+                  <li><a href="#none">V-train 소개</a></li>
+                  <li><a href="#none">V-train 추천여행</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">남도해양열차</a></li>
+                  <li><a href="#none">S-train 소개</a></li>
+                  <li><a href="#none">S-train 추천여행</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">정선아리랑열차</a></li>
+                  <li><a href="#none">A-train 소개</a></li>
+                  <li><a href="#none">A-train 추천여행</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">바다열차</a></li>
+                  <li class="bold"><a href="#none">교육열차</a></li>
+                  <li class="bold"><a href="#none">국악와인열차</a></li>
+                  <li class="bold"><a href="#none">팔도장터열차</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main">
+              <a href="#none">자유여행</a>
+              <div class="sub_all">
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">국내여행패스</a></li>
+                  <li><a href="#none">내일로 두번째 이야기</a></li>
+                  <li><a href="#none">문화누리패스</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">해외여행패스</a></li>
+                  <li><a href="#none">일본패스</a></li>
+                  <li><a href="#none">유럽패스</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">기차여행만들기</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">호텔예약</a></li>
+                  <li class="bold"><a href="#none">렌터카예약</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main">
+              <a href="#none">여행상품</a>
+              <div class="sub_all">
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">테마패키지</a></li>
+                  <li><a href="#none">우리지역 대표상품</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">KTX + 연계서비스</a></li>
+                  <li><a href="#none">레일텔</a></li>
+                  <li><a href="#none">레일쉽-제주도(목포)</a></li>
+                  <li><a href="#none">레일쉽-제주도(여수)</a></li>
+                  <li><a href="#none">레일쉽-울릉도(포항))</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">국내패키지</a></li>
+                  <li><a href="#none">수도권</a></li>
+                  <li><a href="#none">강원권</a></li>
+                  <li><a href="#none">충청권</a></li>
+                  <li><a href="#none">경상권</a></li>
+                  <li><a href="#none">전라권</a></li>
+                  <li><a href="#none">제주권</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">이달의 기차여행</a></li>
+                  <li class="bold"><a href="#none">여행상품 예약확인</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main">
+              <a href="#none">종합이용안내</a>
+              <div class="sub_all">
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">할인 및 부가서비스</a></li>
+                  <li class="bold"><a href="#none">승차권이용안내</a></li>
+                  <li class="bold"><a href="#none">교통약자 배려서비스</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">전철이용안내/지연증명</a></li>
+                  <li class="bold"><a href="#none">유실물</a></li>
+                  <li class="bold"><a href="#none">고객의소리 접수/조회</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">철도고객센터</a></li>
+                  <li class="bold"><a href="#none">광고안내</a></li>
+                  <li class="bold"><a href="#none">승차권 제휴할인 안내</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main">
+              <a href="#none">기차역정보/노선도</a>
+              <div class="sub_all">
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">기차역 안내</a></li>
+                  <li><a href="#none">KTX역</a></li>
+                  <li><a href="#none">일반철도</a></li>
+                  <li><a href="#none">광역철도</a></li>
+                </ul>
+                <ul class="sub_of_sub">
+                  <li class="bold"><a href="#none">철도노선 안내</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="sub_bgbox"></div>
+  </header>
+  <!-- Section Start -->
+  <section id="main">
+    <div class="main-slide">
+      <img src="images/main/520376.jpg" alt="메인1">
+    </div>
+    <div class="heading-text">
+      <span>KTX 어쩌고 저쩌고</span>
+    </div>
+    <div class="reserve-wrap">
+      <div class="station-tab">
+        <div data-alt="ticket" class="active">간편승차권예매</div>
+        <div data-alt="trip">기차여행검색</div>
+      </div>
+      <div class="reserve-content active" id="ticket">
+        <div class="input-area">
+          <input type="text" class="de_station map" placeholder="출발역"><i class="xi-search"></i>
+          <input type="text" class="ar_station map" placeholder="도착역"><i class="xi-search"></i>
+          <input type="text" class="de_date calendar" placeholder="출발일"><i class="xi-calendar"></i>
+          <input type="text" class="ar_date time" placeholder="출발시간"><i class="xi-time-o"></i>
+          <select name="num_people" id="numPeople">
+            <option value="1" selected>어른 1명</option>
+            <option value="2">어른 2명</option>
+            <option value="3">어른 3명</option>
+            <option value="4">어른 4명</option>
+            <option value="5">어른 5명</option>
+            <option value="6">어른 6명</option>
+            <option value="7">어른 7명</option>
+            <option value="8">어른 8명</option>
+            <option value="9">어른 9명</option>
+          </select>
+          <button id="book">승차권예매</button>
+        </div>
+      </div>
+      <div class="reserve-content" id="trip">
+        <div class="input-area">
+          <select name="theme-trip" id="themeTrip">
+            <option value="all" selected>전체</option>
+            <option value="attraction">관광지</option>
+            <option value="stay">숙박</option>
+            <option value="experience">체험</option>
+            <option value="traffic">교통</option>
+            <option value="shopping">쇼핑</option>
+            <option value="food">음식</option>
+            <option value="else">기타</option>
+          </select>
+          <select name="area-trip" id="areaTrip">
+            <option value="all" selected>전체</option>
+            <option value="capital">수도권</option>
+            <option value="kangwon">강원권</option>
+            <option value="chungcheong">충청권</option>
+            <option value="gyeongsang">경상권</option>
+            <option value="jeolla">전라권</option>
+            <option value="jeju">제주권</option>
+          </select>
+          <input type="text" class="de_date_2 calendar" placeholder="출발일"><i class="xi-calendar"></i>
+          <input type="text" class="name-product" placeholder="상품명">
+          <button id="search">기차여행 검색</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 할인상품, 배너 -->
+  <section id="group-01">
+    <div class="inner-01">
+      <div class="inner-left">
+        <div class="sales">
+          <p class="title">KTX 할인상품</p>
+          <div class="sales-icon">
+            <div class="sales-iconBox">
+              <img class="student" src="icons/student.png" alt="청소년드림">
+              <span>청소년드림</span>
+            </div>
+            <div class="sales-iconBox">
+              <img class="youth" src="icons/youth-day.png" alt="힘내라청춘">
+              <span>힘내라청춘</span>
+            </div>
+            <div class="sales-iconBox">
+              <img class="mom" src="icons/pregnant.png" alt="맘편한KTX">
+              <span>맘편한KTX</span>
+            </div>
+            <div class="sales-iconBox">
+              <img class="children" src="icons/sister-and-brother.png" alt="다자녀행복">
+              <span>다자녀행복</span>
+            </div>
+          </div>
+        </div>
+        <div class="trip">
+          <p class="title">BEST 여행상품</p>
+          <div class="trip-box">
+            <img src="images/main/ProdDisplay_202306300401020610.jpg" alt="best여행상품">
+          </div>
+        </div>
+      </div>
+      <div class="inner-right">
+        <div class="event">
+          <p class="title">레츠코레일 소식&amp;이벤트</p>
+          <div class="banner-slide">
+            <img src="images/banner/ProdDisplay_202306010951495900.jpg" alt="배너01">
+            <img src="images/banner/ProdDisplay_202307030148550920.jpg" alt="배너02">
+            <img src="images/banner/ProdDisplay_202307030149173190.jpg" alt="배너03">
+            <img src="images/banner/ProdDisplay_202308120217555380.jpg" alt="배너04">
+            <img src="images/banner/ProdDisplay_202308300226264750.jpg" alt="배너05">
+            <img src="images/banner/ProdDisplay_202308300232395010.jpg" alt="배너06">
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- 종합이용가이드 -->
+  <section id="group-02">
+    <div class="inner-02">
+      <p class="title">종합이용가이드</p>
+      <div class="icon-area">
+        <div class="icon-box">
+          <img src="icons/승차권이용안내-02.png" alt="">
+          <span>승차권
+            이용안내
+          </span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/광명역도심공항터미널-02.png" alt="">
+          <span>광명역
+            도심공항터미널
+          </span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/할인-02.png" alt="">
+          <span>할인제도</span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/유실물-02.png" alt="">
+          <span>유실물</span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/승차권제휴할인-02.png" alt="">
+          <span>승차권
+            제휴할인
+          </span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/특송-02.png" alt="">
+          <span>KTX 특송</span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/열차운임-02.png" alt="">
+          <span>열차운임/
+            시간표
+          </span>
+        </div>
+        <div class="icon-box">
+          <img src="icons/노선검색-02.png" alt="">
+          <span>광명철도
+            노선검색
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="tranin-animation">
+      <div class="train-wrap">
+        <img src="images/train_full.png" alt="열차">
+      </div>
+    </div>
+  </section>
+  <!-- 공지사항 -->
+  <section id="group-03">
+    <div class="inner-03">
+      <div class="notice-area">
+        <p class="title">공지사항</p>
+        <div class="notice">
+          <p class="subtitle">레츠코레일의 새로운 소식을 전해드립니다.</p>
+          <button class="more_btn">더보기</button>
+          <table>
+            <tr>
+              <td>휠체어석(전동포함) 이용제한 역 알림(23년 9월 4일 기준)</td>
+              <td class="td-date">2023.09.04</td>
+            </tr>
+            <tr>
+              <td>10월 2일 ITX-청춘 열차운행 변경 알림</td>
+              <td class="td-date">2023.08.31</td>
+            </tr>
+            <tr>
+              <td>KTX 10억명 돌파 고객감사 프로모션</td>
+              <td class="td-date">2023.08.30</td>
+            </tr>
+            <tr>
+              <td>우리카드 승차권 결제 프로모션 알림</td>
+              <td class="td-date">2023.08.29</td>
+            </tr>
+            <tr>
+              <td>영동선 복구공사 관련 열차운행 조정 알림</td>
+              <td class="td-date">2023.08.28</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="station-area">
+        <p class="title">KTX역 안내</p>
+        <div class="station-tab">
+          <!--탭메뉴-->
+          <div class="tab-header">
+            <ul class="tab-menu">
+              <li data-alt="tab1" class="active">경부선</li>
+              <li data-alt="tab2">호남선</li>
+              <li data-alt="tab3">경전선</li>
+              <li data-alt="tab4">전라선</li>       
+              <li data-alt="tab5">강릉선</li>       
+              <li data-alt="tab6">중앙선</li>       
+              <li data-alt="tab7">중부내륙선</li>       
+            </ul>
+          </div>
+      
+          <!--탭메뉴 클릭시 바뀌는 하단내용-->
+          <div class="tab-contents">
+            <div id="tab1" class="active">
+              <img src="images/station/map_ktx01.png" alt="경부선">
+            </div>
+            <div id="tab2">
+              <img src="images/station/map_ktx02.png" alt="호남선">
+            </div>
+            <div id="tab3"> 
+              <img src="images/station/map_ktx03.png" alt="경전선">
+            </div>
+            <div id="tab4"> 
+              <img src="images/station/map_ktx04_01.png" alt="전라선">
+            </div>
+            <div id="tab5"> 
+              <img src="images/station/map_ktx05.png" alt="강릉선">
+            </div>
+            <div id="tab6"> 
+              <img src="images/station/map_ktx06.png" alt="중앙선">
+            </div>
+            <div id="tab7"> 
+              <img src="images/station/map_ktx07.png" alt="중부내륙선">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- KTX 매거진 -->
+  <section id="group-04">
+    <div class="inner-04">
+      <div class="magazine-header">
+        <img src="images/logos/ktx-logo.png" alt="ktx매거진로고">
+        <p class="title">매거진</p>
+      </div>
+      <div class="magazine-wrap">
+        <div class="magazine-slider">
+          <div class="slide">
+            <img src="images/magazine/20230727110509959_utXC.jpg" alt="8월호_원주">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230629043034733_p3TR.jpg" alt="7월호_대전">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230602012253284_dsLV.jpg" alt="6월호_영주">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230508014115836_4i2R.png" alt="5월호_안동">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230405103824312_vSRb.png" alt="4월호_영월">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230306052432043_RTMO.png" alt="3월호_광주">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230127034416647_NKaQ.png" alt="2월호_강진">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/magazine/20230127034317590_8E4b.png" alt="1월호_목포">
+            <div class="content">
+              <span>PDF</span>
+              <span>미리보기</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <span class="slider__label sr-only">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="group-05">
+    <div class="animated-title">
+      <div class="track">
+        <span class="content">
+          &nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL
+        </span>
+        <span class="content">
+          &nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL
+        </span>
+  </section>
+  <!-- Section End -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logos/f_logo.gif" alt="footerLogo">
+      </div>
+      <div class="footer-text">
+        <div class="footer-imgs">
+          <img src="images/footer/ban01.gif" alt="">
+          <img src="images/footer/ban02.gif" alt="">
+          <img src="images/footer/ban03.gif" alt="">
+          <img src="images/footer/ban04.gif" alt="">
+          <img src="images/footer/ban05.gif" alt="">
+          <img src="images/footer/ban06.gif" alt="">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#none">고객서비스현장</a></li>
+            <li><a href="#none">보도자료</a></li>
+            <li><a href="#none">이용약관</a></li>
+            <li><a href="#none">정보공개</a></li>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">이메일무단수집거부</a></li>
+            <li><a href="#none">광고안내</a></li>
+            <li><a href="#none">저작권정책</a></li>
+            <li><a href="#none">러브포인트</a></li>
+            <li><a href="#none">이벤트</a></li>
+          </ul>
+        </nav>
+        <address>
+          <span>
+            상호: 한국철도공사 | 대표: 한문희 | 사업자등록: 314-82-10024 | 통신판매사업신고: 대전동구-0233호 | 주소: (34618) 대전광역시 동구 중앙로 240
+            TEL: 154407788 | FAX: 02-361-8385
+          </span>
+        </address>
+        <span class="copy">copyright &copy; KORIEA RAILROAD.ALL RIGHT SEREVED.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/slick/slick.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src="custom.js"></script>
+</body>
+</html>   
