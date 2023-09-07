@@ -679,12 +679,12 @@ header.active {
   border-top: none;
   display: flex; /* 지도와 역사진 */
   justify-content: space-between;
+  margin: 20px 0 0 20px;
 }
 .tab-contents .tab-box {
   display: inline-block;
-  /* width: 100%; */
+  width: 57%;
   height: 450px;
-  padding: 20px;
   display: none;
 }
 .tab-contents .tab-box.active { display:block; }
