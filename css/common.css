@@ -101,3 +101,7 @@ img {
   display: block;
   text-indent: -9999px;
 }
+table {
+  border-collapse : collapse;
+  border-spacing : 0
+}

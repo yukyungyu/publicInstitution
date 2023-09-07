@@ -165,7 +165,6 @@ $(document).ready(function(){
     $('.sub_bgbox').hide();
   });
 
-  /* #################### Main ###################### */
   /* 간편예매, 기차여행 검색 탭 */
   $(".station-tab div").click(function() {
     $(this).addClass("active");
@@ -189,4 +188,8 @@ $(document).ready(function(){
     $(".tab-contents div").removeClass("active");
     $("#" + tabname).addClass("active");
   });
+
+  function selectSt() {
+    console.log('킅릭');
+  }
 });

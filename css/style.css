@@ -644,7 +644,7 @@ header.active {
   width: 50%;
   float: right;
 }
-.station-tab {
+.stationInfo-tab {
   max-width: 100%;
   width: 100%;
 }
@@ -677,24 +677,160 @@ header.active {
 }
 .tab-contents {
   border-top: none;
-  border-radius: 0 0 10px 10px;
+  display: flex; /* 지도와 역사진 */
+  justify-content: space-between;
 }
-.tab-contents div {
-  width: 100%;
+.tab-contents .tab-box {
+  display: inline-block;
+  /* width: 100%; */
   height: 450px;
   padding: 20px;
   display: none;
 }
-.tab-contents div.active { display:block; }
-
+.tab-contents .tab-box.active { display:block; }
+.tab-box {
+  position: relative;
+}
 .tab-contents img {
   width: 300px;
   height: auto;
   aspect-ratio: auto 1/1;
-/*   
-  width: 345px;
-  height: 477px; */
 }
+.st_info_btn li {
+  min-width: 25px;
+  max-width: 100px;
+  height: 20px;
+}
+.st_info_btn li a {
+  position: absolute;
+  display: block;
+  background: #F29E11;
+  color: #000;
+  border: 1px solid #191919;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  padding: 2px 3px;
+}
+.ps01 a {
+  left: 58px;
+  top: 59px;
+}
+.ps02 a { 
+  left: 97px;
+  top: 68px;
+}
+.ps04 a { 
+  left: 105px;
+  top: 98px;
+}
+.ps05 a { 
+  left: 58px;
+  top: 114px;
+}
+.ps06 a { 
+  left: 122px;
+  top: 150px;
+}
+.ps07 a { 
+  left: -5px;
+  top: 177px;
+}
+.ps08 a { 
+  left: 123px;
+  top: 188px;
+}
+.ps09 a { 
+  left: 104px;
+  top: 246px;
+}
+.ps11 a { 
+  left: 201px;
+  top: 250px;
+}
+.ps12 a { 
+  left: 245px;
+  top: 275px;
+}
+.ps16 a { 
+  left: 303px;
+  top: 297px;
+}
+.ps17 a { 
+  left: 298px;
+  top: 327px;
+}
+.ps18 a { 
+  left: 280px;
+  top: 368px;
+}
+.ps19 a { 
+  left: 232px;
+  top: 357px;
+}
+.ps13 a { 
+  left: 214px;
+  top: 323px;
+}
+.ps40 a { 
+  left: 300px;
+  top: 264px;
+}
+.ps56 a { 
+  left: 180px;
+  top: 298px;
+}
+
+
+/* 역 정보 표시 */
+.tab-contents .st_info_text {
+  padding: 20px 0;
+  display: inline-block;
+}
+.tab-contents .st_info_text>div {
+  width: inherit;
+  height: inherit;
+}
+.tab-contents .st_info_text img {
+  width: 100%;
+}
+.st_info_text p {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 15px;
+  background-color: var(--main-bg-color);
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 3px;
+}
+#infoTable {
+  width: inherit;
+  font-size: 14px;
+  word-break: break-all;
+  margin-top: 20px;
+}
+#infoTable tr {
+  height: 45px;
+}
+#infoTable td {
+  border: 1px solid #eee;
+  padding: 5px 0;
+}
+#infoTable td:first-child {
+  width: 20%;
+  text-align: center;
+}
+#infoTable td:last-child {
+  width: 80%;
+}
+
+
+
+
+
+
 
 /* -------------- group-04: ktx매거진 -------------- */
 #group-04 {
