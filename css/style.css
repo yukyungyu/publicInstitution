@@ -678,8 +678,7 @@ header.active {
 .tab-contents {
   border-top: none;
   display: flex; /* 지도와 역사진 */
-  justify-content: space-between;
-  margin: 20px 0 0 20px;
+  justify-content: space-around;
 }
 .tab-contents .tab-box {
   display: inline-block;
