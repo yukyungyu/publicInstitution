@@ -1,7 +1,20 @@
 $(document).ready(function(){
+
   /* Aos.js */
   AOS.init();
 
+  /* 헤더 */
+  $(window).scroll(function() {
+
+    let pos = $(window).scrollTop();
+
+    if(pos > 50) {
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    };
+
+  });
 
   /* Slide - main */
   let $img = $(".changeimg ul li");

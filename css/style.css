@@ -46,24 +46,30 @@ section {
 header {
   position: fixed;
   z-index: 10000;
-  background: var(--main-bg-color);
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
-.header-inner {
-  max-width: 1400px;
-  height: 100%;
-  margin: auto;
-  color: #fff;
+header.active {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner-1f {
+  height: 50px; 
+  background: #083B82;
+  color:#fff;
+}
+.header-inner-2f {
+  height: 50px;
+  background-color: #fff;
 }
 .header-1f,
 .header-2f {
-  width: 100%;
+  width: 1400px;
+  height: 100%;
+  margin: auto;
   text-align: center;
 }
-.header-1f {height: 45%;}
-.header-2f {height: 55%; margin-top: 5px;}
-.header-inner>div>a {
+.logo {
   display: inline-block;
   width: 210px;
   height: 50px;
@@ -72,7 +78,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-.header-inner>div>a>img {
+.logo>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -103,8 +109,8 @@ header {
   width: 100%;
   height: 50px;
   line-height: 50px; 
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* Sub Menu*/
@@ -156,11 +162,11 @@ header {
 /* ############## Section ############## */
 /* -------------- Section: main -------------- */
 #main {
-  padding-top: 120px;
+  padding-top: 100px;
   max-width: 1920px;
-  max-height: 770px;
+  max-height: 750px;
   width: 1920px;
-  height: 770px;
+  height: 750px;
   position: relative;
 }
 /* ----------------------------------------------------------------------- */
@@ -190,7 +196,7 @@ header {
   transition: 1.5s;
 }
 .changeimg ul li.imgVisible {
-  opacity:1;
+  opacity: 1;
   transform: scale(1);
   z-index: 99;
 }
