@@ -45,11 +45,10 @@ section {
 /* ############## Header ############## */
 header {
   position: fixed;
-  z-index: 10;
+  z-index: 10000;
   background: var(--main-bg-color);
   width: 100%;
   height: 120px;
-  /* transition: 0.5s; */
 }
 .header-inner {
   max-width: 1400px;
@@ -63,7 +62,7 @@ header {
   text-align: center;
 }
 .header-1f {height: 45%;}
-.header-21f {height: 55%;}
+.header-2f {height: 55%; margin-top: 5px;}
 .header-inner>div>a {
   display: inline-block;
   width: 210px;
@@ -97,7 +96,6 @@ header {
 }
 .gnb .main {
   width: calc(100% / 6);
-  /* width: 150px; */
 }
 .gnb>.main>a {
   display: block;
@@ -106,7 +104,7 @@ header {
   height: 50px;
   line-height: 50px; 
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Sub Menu*/
@@ -116,7 +114,6 @@ header {
   width: 100%; /* 헤더 전체 */
   height: 300px;
   z-index: 100;
-  /* display: flex; */
   display: none;
 }
 .sub_all .sub_of_sub {
@@ -161,34 +158,143 @@ header {
 #main {
   padding-top: 120px;
   max-width: 1920px;
-  max-height: 1080px;
+  max-height: 770px;
   width: 1920px;
-  height: 1080px;
+  height: 770px;
   position: relative;
 }
-.slideShow {
+/* ----------------------------------------------------------------------- */
+.fadeShow{
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  margin: auto;
+  overflow: hidden;
+}
+.changeimg {
   width: 100%;
   height: 100%;
+  
 }
-.slideShow img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-}
-.heading-text {
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg ul li{
+  opacity: 0;
   position: absolute;
-  top: 40%;
-  /* transform: translateY(-50%); */
-  left: 10%;
-  text-align: center;
-  width: 750px;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: 1.5s;
 }
-.heading-text span {
-  font-size: 68px; /* 68px; */
-  font-weight: bold;
-  color: #fff;
+.changeimg ul li.imgVisible {
+  opacity:1;
+  transform: scale(1);
+  z-index: 99;
+}
 
+.changeimg ul li:nth-child(1){
+  background-image: linear-gradient(
+    to left, rgba(0,0,0,0), rgba(0,0,0,0.3)
+  ), url(../images/main/520376.jpg);
+  background-position: bottom center;
 }
+.changeimg ul li:nth-child(2){
+  background-image: linear-gradient(
+    to left, rgba(0,0,0,0), rgba(0,0,0,0.3)
+  ), url(../images/main/월정사2.jpg);
+  background-position: bottom center;
+}
+.changeimg ul li:nth-child(3){
+  background-image: linear-gradient(
+    to left, rgba(0,0,0,0), rgba(0,0,0,0.3)
+  ), url(../images/main/부산.jpg);
+  background-position: bottom center;
+}
+.changeimg ul li:nth-child(4){
+  background-image: linear-gradient(
+    to left, rgba(0,0,0,0), rgba(0,0,0,0.3)
+  ), url(../images/main/춘천.jpg);
+  background-position: bottom center;
+}
+
+/*비주얼 텍스트 공통*/
+.des {
+  position: absolute;
+  width: 1200px;
+  height: 480px;
+  bottom: 0;
+  left: 45%;
+  transform: translateX(-50%) scale(1.1);
+  color: #fff;
+  opacity: 0;
+  transition: all 1s;
+}
+.des.textVisible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+.des h3 {
+  width: 100%;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 0 0 2px #eee;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+.des p{
+  font-size: 18px;
+  line-height: 30px;
+}
+.des button{
+  width: 150px;
+  height: 42px;
+  background:rgba(0,0,0,0.3);
+  border:1px solid #ccc;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  margin: 25px auto 0;
+  transition: 0.35s;
+  color: #fff;
+}
+.des button:hover{
+  background:rgba(0,0,0,0.6);
+}
+
+/* 좌우버튼 */
+.icon{
+  font-size: 80px;
+  color: rgba(255,255,255,0.8);
+}
+.side_btn .lbtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  left: 30px;
+  width: 65px;
+  height: 60px;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  right:30px;
+  width:65px;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+/* ----------------------------------------------------------------------- */
+
+
+/* -------------- Section: 예약탭 -------------- */
 .reserve-wrap {
   position: relative;
   width: 1300px;
@@ -201,6 +307,7 @@ header {
   left: 0;
   width: 100%;
   display: flex;
+  z-index: 300;
 }
 .reserve-wrap .station-tab div {
   font-size: 1.250rem;
@@ -281,7 +388,6 @@ header {
   border-right: 1px solid #eee;
 }
 .inner-left, .inner-right {
-  height: 600px;
 }
 .sales {
   margin-right: 50px;
@@ -294,7 +400,7 @@ header {
 .sales-icon .sales-iconBox {
   display: inline-block;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 15px 0 0;
   width: 150px;
   height: 150px;
   border: 1px solid #eee;
@@ -314,8 +420,8 @@ header {
 .sales-iconBox span {
   display: inline-block;
   width: 150px;
-  height: 50px;
-  line-height: 50px;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
   margin-top: 15px;
   font-size: 18px;
@@ -344,6 +450,22 @@ header {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+.banner-slide .slick-dots li {
+  margin: 0; /* 간격조정 */
+}
+.banner-slide .slick-dots li button:before {
+  top: 10px;
+  opacity: 1;
+  transform: scale(0.7);
+}
+.banner-slide .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+  top: 8px;
+  transform: scale(0.5);
 }
 .trip {
   margin-right: 50px;
@@ -374,11 +496,10 @@ header {
   height: 150px;
   padding: 10px;
   border-radius: 10px;
-  /* background-color: rgba(255,255,255); */
-  background-color: #F2F6F9;
   text-align: center;
   cursor: pointer;
   display: flex;
+  transition: 0.5s;
   flex-direction: column;
   border-radius: 10px;
   border-radius: 12px;
@@ -392,6 +513,7 @@ header {
   object-fit: cover;
   display: block;
   margin: auto;
+  transition: 0.5s;
 }
 .icon-box span {
   display: inline-block;
@@ -400,17 +522,18 @@ header {
   white-space: pre-line;
   width: 100%;
   height: 55px;
-  /* border: 1px solid #000; */
 }
 .icon-box:hover {
   background-color: aliceblue;
   filter: invert(0);
 }
-
+.icon-box:hover img {
+  transform: translateY(-10%);
+}
 .tranin-animation {
   position: relative;
   height: 240px;
-  animation: trainFlow 10s linear 0s infinite;
+  animation: trainFlow 13s linear 0s infinite;
 }
 .train-wrap {
   max-width: 1040px;
@@ -426,11 +549,11 @@ header {
   position: absolute;
 }
 @keyframes trainFlow {
-  0% {transform: translate(0% , 0%)}
-  25% {transform: translate(-37%, -10%);}
-  50% {transform: translate(-75%, -15%)}
-  75% {transform: translate(-112%, -10%)}
-  100% {transform: translate(-150%, 0%)}
+  0% {transform: translateX(0%)}
+  25% {transform: translateX(-37%);}
+  50% {transform: translateX(-75%)}
+  75% {transform: translateX(-112%)}
+  100% {transform: translateX(-150%)}
 }
 /* -------------- group-03: 공지사항 -------------- */
 #group-03 {
@@ -455,19 +578,17 @@ header {
 .notice {
   max-width: 95%;
   width: 95%;
-  height: 360px;
+  height: auto;
   margin-right: 50px;
   overflow: hidden;
 }
-.subtitle {
+.notice .subtitle {
   font-size: 20px;
   margin-bottom: 20px;
   float: left;
 }
 .more_btn {
   float: right;
-  height: 45px;
-  line-height: 45px;
   text-align: center;
   border: none;
   background-color: transparent;
@@ -491,7 +612,7 @@ header {
   border-top: 1px solid #191919;
   width: 100%;
   max-width: 100%;
-  height: calc(460px - 40px); /* 360-(padding40) */
+  height: auto;
 }
 .notice table tr td {
   border: none;
@@ -499,6 +620,8 @@ header {
   font-weight: 500;
   cursor: pointer;
   text-indent: 3px;
+  height: 5rem;
+  margin-bottom: 10px;
 }
 .notice table tr:last-child td {
   border-bottom: none;
@@ -507,7 +630,7 @@ header {
   background-color: aliceblue;
 }
 .td-date {
-  text-align: right;
+  text-align: center;
 }
 
 /* KTX역 정보 */
@@ -680,39 +803,32 @@ header {
 }
 .animated-title {
   color: var(--main-bg-color);
-  font-size: 72px;
+  font-size: 72px; 
   letter-spacing: 2px;
   font-family: 'Korail_Round_Gothic_Bold';
   position: relative; 
-  /* font-style: italic; */
-  width: 100%;
+  width: 100vw;
   max-width:100%; 
-  height: auto; 
+  height: 200px; 
   padding:100px 0; 
-  overflow-x: hidden; 
-  overflow-y: hidden; 
+  overflow: hidden; 
 }
 .animated-title .track {
   position: absolute; 
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 40s linear infinite; 
+  animation: marquee 30s linear infinite; 
 }
+
 @keyframes marquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-
-
 
 /* ############## Footer ############## */
 footer {
   width: 100%;
-  height: 340px;
+  height: 320px;
   background-color: #fff;
   border-top: 1px solid var(--korail-gray);
 }
@@ -743,3 +859,4 @@ footer {
   font-size: 12px;
   font-weight: 700;
 }
+

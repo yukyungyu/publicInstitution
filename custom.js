@@ -1,10 +1,108 @@
 $(document).ready(function(){
-  /* Slick - main */
+  /* Aos.js */
+  AOS.init();
+
+
+  /* Slide - main */
+  let $img = $(".changeimg ul li");
+  let $text = $('.changeimg ul li .des');
+  let $lbtn = $(".side_btn .lbtn");
+  let $rbtn = $(".side_btn .rbtn");
+  let oldImg = 0;
+  let newImg = 0;
+  let oldText = 0;
+  let newText = 0;
+  let count = $img.length;
+
+  //이미지&텍스트 전환효과
+  function changeImg(newImg) {
+    
+    if(oldImg != newImg) {
+      $img.eq(oldImg).removeClass('imgVisible');
+      $img.eq(newImg).addClass('imgVisible');
+    }
+    oldImg = newImg;
+  };
+
+  function changeText(newText) {
+    
+    if(oldText != newText) {
+      $text.eq(oldText).removeClass('textVisible');
+      $text.eq(newText).addClass('textVisible');
+    }
+    oldText = newText;
+
+  };
+
+  //자동함수
+  function autoImg() {
+    newImg++;
+    if(newImg > count-1) {
+      newImg = 0;
+    }
+    changeImg(newImg);
+  };
+  timer1 = setInterval(autoImg, 4000);
+  
+  function autoText() {
+    newText++;
+    if(newText > count-1) {
+      newText = 0;
+    }
+    changeText(newText);
+  };
+  timer2 = setInterval(autoText, 4000);
+
+  //좌우버튼 클릭시..
+  $rbtn.click(function(){
+    clearInterval(timer1);
+    clearInterval(timer2);
+
+    newImg++;
+      if(newImg > count-1){
+        newImg = 0;
+      }
+      changeImg(newImg);
+
+
+      newText++;
+      if(newText > count-1){
+        newText = 0;
+      }
+      changeText(newText);
+
+    timer1 = setInterval(autoImg,4000);
+    timer2 = setInterval(autoText,4000);
+  });
+
+  $lbtn.click(function(){
+    clearInterval(timer1);
+    clearInterval(timer2);
+
+    newImg--;
+      if(newImg < 0){
+        newImg = count-1;
+      }
+      changeImg(newImg);
+
+
+      newText--;
+      if(newText < 0){
+        newText = count-1;
+      }
+      changeText(newText);
+
+    timer1 = setInterval(autoImg,4000);
+    timer2 = setInterval(autoText,4000);
+  });
+
+
+
   
   /* Slick - banner */
   $(".banner-slide").slick({
     infinite: true,
-    dots: false,
+    dots: true,
     autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
@@ -20,8 +118,8 @@ $(document).ready(function(){
     speed : 100,
     arrows : true,
     dots : false,
-    autoplay : false,
-    autoplaySpeed : 4500,
+    autoplay : true,
+    autoplaySpeed : 3000,
     pauseOnHover : true,
     vertical : false,	
     dotsClass : "slick-dots", 
@@ -45,13 +143,13 @@ $(document).ready(function(){
 
   /* #################### Header ###################### */
   $('.gnb .main').mouseenter(function() {
+    $('.sub_bgbox').stop().show();
     $(this).find('.sub_all').css({'display':'flex'});
-    $('.sub_bgbox').stop().slideDown(700,"easeOutBounce");
-    $(this).find('.sub_all').stop().slideDown(700,"easeOutBounce");
+    $(this).find('.sub_all').show();
   });
   $('.gnb .main').mouseleave(function(){
-    $(this).find('.sub_all').stop().slideUp();
-    $('.sub_bgbox').stop().slideUp();
+    $(this).find('.sub_all').hide();
+    $('.sub_bgbox').hide();
   });
 
   /* #################### Main ###################### */

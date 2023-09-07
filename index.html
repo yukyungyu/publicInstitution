@@ -13,6 +13,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Aos.css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Slick.css -->
   <link rel="stylesheet" href="js/slick/slick-theme.css" />
   <link rel="stylesheet" href="js/slick/slick.css" />
 
@@ -143,7 +146,7 @@
                   <li><a href="#none">레일텔</a></li>
                   <li><a href="#none">레일쉽-제주도(목포)</a></li>
                   <li><a href="#none">레일쉽-제주도(여수)</a></li>
-                  <li><a href="#none">레일쉽-울릉도(포항))</a></li>
+                  <li><a href="#none">레일쉽-울릉도(포항)</a></li>
                 </ul>
                 <ul class="sub_of_sub">
                   <li class="bold"><a href="#none">국내패키지</a></li>
@@ -200,20 +203,60 @@
     </div>
     <div class="sub_bgbox"></div>
   </header>
-  <!-- Section Start -->
+  <!-- Section Start --> <!-- 슬라이드 -->
   <section id="main">
-    <div class="main-slide">
-      <img src="images/main/520376.jpg" alt="메인1">
+    <div class="fadeShow">
+      <div class="changeimg">
+        <ul>
+          <li class="imgVisible">
+            <div class="des textVisible">
+              <h3>내일로 두번째 이야기</h3><!-- heading-text -->
+              <p>"전 국민 누구나 즐기는 7일간의 자유여행"</p>
+              <p>보다 더 자유롭고 편안해진 내일로를 경험해보세요.</p>
+              <button>자세히보기</button>
+            </div>
+          </li>
+          <li>
+            <div class="des">
+              <h3>월정사 웰니스여행 여운(餘韻)</h3>
+              <p>ESG 가치여행</p>
+              <p>성산 오대산 산사(山寺) 천년의 울림<br>
+              전통산사문화재 오대산 월정사 탐방하기</p>
+              <button>자세히보기</button>
+            </div>
+          </li>
+          <li>
+            <div class="des">
+              <h3>이토록 아름다운 부산</h3>
+              <p>KTX 상행-경부선, 동해선</p>
+              <p>아름다운 동부산의 수려한 해안절경을 감상해보세요.</p>
+              <button>자세히보기</button>
+            </div>
+          </li>
+          <li>
+            <div class="des">
+              <h3>숨은 춘천 찾기</h3>
+              <p>[레일티켓]ITX-청춘열차 타고 떠나는 춘천여행</p>
+              <p>‘뉴트로’ ‘로컬마켓&카페’ ‘문화‧예술 체험 공간’ ‘자연‧생태 체험’ 네 가지 주제에 맞춘 열다섯 군데를 구석구석 누비세요.</p>
+              <button>자세히보기</button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="heading-text">
-      <span>KTX 어쩌고 저쩌고</span>
+    <!-- 좌우버튼 -->
+    <div class="side_btn">
+      <a class="lbtn" href="#"><span class="icon xi-angle-left-thin"></span></a>
+      <a class="rbtn" href="#"><span class="icon xi-angle-right-thin"></span></a>
     </div>
+  </section>
+  <section id="reserve">
     <div class="reserve-wrap">
       <div class="station-tab">
         <div data-alt="ticket" class="active">간편승차권예매</div>
         <div data-alt="trip">기차여행검색</div>
       </div>
-      <div class="reserve-content active" id="ticket">
+      <div class="reserve-content active" id="ticket" data-aos="fade-down" data-aos-duration="700">
         <div class="input-area">
           <input type="text" class="de_station map" placeholder="출발역"><i class="xi-search"></i>
           <input type="text" class="ar_station map" placeholder="도착역"><i class="xi-search"></i>
@@ -266,8 +309,8 @@
     <div class="inner-01">
       <div class="inner-left">
         <div class="sales">
-          <p class="title">KTX 할인상품</p>
-          <div class="sales-icon">
+          <p class="title" data-aos="fade-up" data-aos-duration="700">KTX 할인상품</p>
+          <div class="sales-icon" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
             <div class="sales-iconBox">
               <img class="student" src="icons/student.png" alt="청소년드림">
               <span>청소년드림</span>
@@ -287,16 +330,17 @@
           </div>
         </div>
         <div class="trip">
-          <p class="title">BEST 여행상품</p>
-          <div class="trip-box">
-            <img src="images/main/ProdDisplay_202306300401020610.jpg" alt="best여행상품">
+          <p class="title" data-aos="fade-up" data-aos-duration="700">BEST 여행상품</p>
+          <div class="trip-box" data-aos="fade-up" 
+          data-aos-delay="400" data-aos-duration="700">
+            <img src="images/main/bestTrip.jpg" alt="best여행상품">
           </div>
         </div>
       </div>
       <div class="inner-right">
         <div class="event">
-          <p class="title">레츠코레일 소식&amp;이벤트</p>
-          <div class="banner-slide">
+          <p class="title" data-aos="fade-up" data-aos-duration="700">레츠코레일 소식&amp;이벤트</p>
+          <div class="banner-slide" data-aos="fade-up" data-aos-duration="1000">
             <img src="images/banner/ProdDisplay_202306010951495900.jpg" alt="배너01">
             <img src="images/banner/ProdDisplay_202307030148550920.jpg" alt="배너02">
             <img src="images/banner/ProdDisplay_202307030149173190.jpg" alt="배너03">
@@ -311,45 +355,53 @@
   <!-- 종합이용가이드 -->
   <section id="group-02">
     <div class="inner-02">
-      <p class="title">종합이용가이드</p>
+      <p class="title" data-aos="fade-up" data-aos-duration="700">종합이용가이드</p>
       <div class="icon-area">
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="400" data-aos-duration="700">
           <img src="icons/승차권이용안내-02.png" alt="">
           <span>승차권
             이용안내
           </span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="550" data-aos-duration="700">
           <img src="icons/광명역도심공항터미널-02.png" alt="">
           <span>광명역
             도심공항터미널
           </span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="700" data-aos-duration="700">
           <img src="icons/할인-02.png" alt="">
           <span>할인제도</span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="850" data-aos-duration="700">
           <img src="icons/유실물-02.png" alt="">
           <span>유실물</span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="1000" data-aos-duration="700">
           <img src="icons/승차권제휴할인-02.png" alt="">
           <span>승차권
             제휴할인
           </span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="1150" data-aos-duration="700">
           <img src="icons/특송-02.png" alt="">
           <span>KTX 특송</span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="1300" data-aos-duration="700">
           <img src="icons/열차운임-02.png" alt="">
           <span>열차운임/
             시간표
           </span>
         </div>
-        <div class="icon-box">
+        <div class="icon-box" data-aos="fade-up"
+        data-aos-delay="1450" data-aos-duration="700">
           <img src="icons/노선검색-02.png" alt="">
           <span>광명철도
             노선검색
@@ -367,8 +419,9 @@
   <section id="group-03">
     <div class="inner-03">
       <div class="notice-area">
-        <p class="title">공지사항</p>
-        <div class="notice">
+        <p class="title" data-aos="fade-up" data-aos-duration="700">공지사항</p>
+        <div class="notice" data-aos="fade-up"
+        data-aos-delay="400" data-aos-duration="700">
           <p class="subtitle">레츠코레일의 새로운 소식을 전해드립니다.</p>
           <button class="more_btn">더보기</button>
           <table>
@@ -396,8 +449,9 @@
         </div>
       </div>
       <div class="station-area">
-        <p class="title">KTX역 안내</p>
-        <div class="station-tab">
+        <p class="title" data-aos="fade-up" data-aos-duration="700">KTX역 안내</p>
+        <div class="station-tab" data-aos="fade-up"
+        data-aos-delay="700" data-aos-duration="700">
           <!--탭메뉴-->
           <div class="tab-header">
             <ul class="tab-menu">
@@ -444,10 +498,11 @@
   <section id="group-04">
     <div class="inner-04">
       <div class="magazine-header">
-        <img src="images/logos/ktx-logo.png" alt="ktx매거진로고">
-        <p class="title">매거진</p>
+        <img src="images/logos/ktx-logo.png" alt="ktx매거진로고" data-aos="fade-up" data-aos-duration="700">
+        <p class="title" data-aos="fade-up" data-aos-duration="700">매거진</p>
       </div>
-      <div class="magazine-wrap">
+      <div class="magazine-wrap" data-aos="fade-up"
+      data-aos-delay="400" data-aos-duration="700">
         <div class="magazine-slider">
           <div class="slide">
             <img src="images/magazine/20230727110509959_utXC.jpg" alt="8월호_원주">
@@ -507,7 +562,7 @@
           </div>
         </div>
         <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-          <span class="slider__label sr-only">
+          <span class="slider__label sr-only"></span>
         </div>
       </div>
     </div>
@@ -515,12 +570,11 @@
   <section id="group-05">
     <div class="animated-title">
       <div class="track">
-        <span class="content">
-          &nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL
-        </span>
-        <span class="content">
-          &nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL
-        </span>
+        LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;
+        LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;LET'S KORAIL&nbsp;
+      </div>
+      </div>
+    </div>
   </section>
   <!-- Section End -->
   <footer>
@@ -563,8 +617,11 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="js/slick/slick.min.js"></script>
   <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <!-- Slick -->
+  <script src="js/slick/slick.min.js"></script>
+  <!-- Aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="custom.js"></script>
 </body>
 </html>   
