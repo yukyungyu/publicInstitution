@@ -18,6 +18,9 @@
  */
  --korail-gray: rgba(119,119,122); /* #77777A */
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
@@ -940,25 +943,26 @@ header.active {
 #group-05 {
   max-width: 100%;
   width: 100%;
-  height: 400px;
+  padding: 100px 0;
 }
 .animated-title {
   color: var(--main-bg-color);
-  font-size: 72px; 
+  font-size: 100px; 
   letter-spacing: 2px;
-  font-family: 'Korail_Round_Gothic_Bold';
+  /* font-family: 'Korail_Round_Gothic_Bold'; */
+  font-style:italic;
+  font-weight: 900;
   position: relative; 
   width: 100vw;
   max-width:100%; 
   height: 200px; 
-  padding:100px 0; 
   overflow: hidden; 
 }
 .animated-title .track {
   position: absolute; 
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 30s linear infinite; 
+  animation: marquee 60s linear infinite; 
 }
 
 @keyframes marquee {
